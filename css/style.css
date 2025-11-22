@@ -1,18 +1,83 @@
+/* Подключаем второй файл стилей (директива @import) */
 @import url(style2.css);
-.book-table {
-    border: rgb(0, 0, 0) 5px solid;
-}
 
-.book-table th,
-.book-table td {
-    border: 3px solid rgb(76, 122, 48);
-    padding: 3px 8px;
+/* --- Стили для текста --- */
+#main-title {
     text-align: center;
+    color: #333;
 }
 
 #text-menu {
     text-align: left;
     color: blue;
-    font-size: 25px; 
+    font-size: 18px; 
+}
+
+/* --- Стили для таблицы (твои цвета) --- */
+.book-table {
+    border: rgb(0, 0, 0) 5px solid;
+    border-collapse: collapse; /* Чтобы рамки были тонкими и аккуратными */
+    width: 100%;
+    background-color: white;
+}
+
+.book-table th,
+.book-table td {
+    border: 3px solid rgb(76, 122, 48); /* Твой зеленый цвет */
+    padding: 5px;
     text-align: center;
+}
+
+/* --- ВАРИАНТ 3: Список с кастомным маркером --- */
+ul.custom-list {
+    list-style-type: none; /* Убираем стандартные черные точки */
+    padding-left: 20px;
+}
+
+ul.custom-list li {
+    position: relative;
+    margin-bottom: 5px;
+}
+
+/* Делаем галочку через CSS */
+ul.custom-list li::before {
+    content: "\2714"; /* Символ галочки */
+    color: red;       /* Красный цвет маркера */
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+/* --- ПУНКТ 2.3: Float (Обтекание) --- */
+.float-box {
+    float: left; /* Главное свойство */
+    width: 60px;
+    height: 60px;
+    background: orange;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    line-height: 60px;
+    margin-right: 15px; /* Отступ от текста */
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+/* --- ПУНКТ 2.3: Position (Фиксированный подвал) --- */
+.fixed-footer {
+    position: fixed; /* Главное свойство */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    z-index: 100; /* Чтобы был поверх всего */
+    font-family: sans-serif;
+}
+
+/* Чтобы подвал не перекрывал низ таблицы */
+body {
+    padding-bottom: 50px; 
+    background-color: #f4f4f4; /* Легкий фон для всей страницы */
 }

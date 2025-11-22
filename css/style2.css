@@ -1,19 +1,29 @@
+/* Главный контейнер, который держит 3 большие колонки */
 .flex-container {
     display: flex;
-    flex-flow: row;
-    justify-content: space-between;
+    flex-flow: row wrap; /* В ряд, если не влезет - перенос */
+    justify-content: center; /* Центрируем */
+    gap: 20px; /* Отступ между большими блоками */
+    align-items: flex-start; /* Прижимаем к верху */
 }
 
-.container {
-    font-family: sans-serif;
-    display: flex;
-    flex-flow: column, wrap;
+/* Оформление блоков с контентом */
+.content-block {
+    background: white;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    /* Ограничиваем ширину, чтобы все влезло */
+    max-width: 400px; 
+    min-width: 300px;
+    flex: 1; /* Растягиваться равномерно */
 }
 
+/* --- ВАРИАНТ 3: ФИГУРА ИЗ КВАДРАТОВ --- */
 .wrapper {
-    width: 300px;
-    height: 300px;
-    margin: 20px;
+    width: 200px;
+    height: 250px; /* Высота контейнера фигуры */
+    margin: 0 auto;
     background: white;
     border: 2px solid #000;
     
@@ -21,23 +31,30 @@
     justify-content: space-between;
     padding: 10px;
     box-sizing: border-box;
-  }
+}
 
-  /* Каждая колонка */
-  .col {
+/* Колонки внутри фигуры */
+.col {
     display: flex;
-    flex-direction: column; /* сверху вниз */
-    justify-content: space-between;
-  }
+    flex-direction: column;
+    justify-content: space-between; /* Квадраты разлетаются вверх-низ */
+    width: 50px;
+}
 
-  .square {
-    width: 60px;
-    height: 60px;
-    background: navy;
-  }
+/* Центральная колонка (только прямоугольник) */
+.center-col {
+    justify-content: center; /* Прямоугольник по центру */
+}
 
-  .rect {
-    width: 60px;
-    height: 180px;          /* в 3 раза выше квадрата */
+/* Твои синие квадраты и прямоугольник */
+.square {
+    width: 50px;
+    height: 50px;
     background: navy;
-  }
+}
+
+.rect {
+    width: 50px;
+    height: 150px; /* Высокий блок */
+    background: navy;
+}

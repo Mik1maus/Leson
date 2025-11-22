@@ -21,15 +21,22 @@
 
 <body>
     <h1 id="main-title">Лабораторна робота №2</h1>
-    <p id="text-menu"><i><b>E=mc<sup>2</sup></b></i>, wher <b>E</b> - energy of the object, <b>m</b> - it's mass,
-        <b>c</b>
-        -
-        cpeed
-        of light in vacuum, equals to 299 792 458 <i>m/s</i></p>
+
+    <div style="width: 90%; margin: 0 auto; margin-bottom: 20px;">
+        <div class="float-box">E</div>
+        <p id="text-menu">
+            <i><b>=mc<sup>2</sup></b></i>, where <b>E</b> - energy of the object, <b>m</b> - its mass, <b>c</b> - speed
+            of light in vacuum.
+            Цей помаранчевий квадрат ліворуч демонструє властивість <b>float</b> (обтікання), яка є обов'язковою за
+            завданням пункту 2.3 методички. Текст гарно його обходить.
+        </p>
+    </div>
+
     <div class="flex-container">
-        <div class="mini-box">
-            <h4 style="color: green;">Список студентів KIYKIy-24-1</h4>
-            <ol>
+
+        <div class="content-block">
+            <h4 style="color: green;">Список студентів (Варіант 3)</h4>
+            <ul class="custom-list">
                 <li>Андрієнко Максим Андрійович</li>
                 <li>Баришев Ярослав Дмитрович</li>
                 <li>Глітко Богдан Олегович</li>
@@ -48,25 +55,39 @@
                 <li>Сподін Максим Романович</li>
                 <li>Стовба Даніїл Авелійович</li>
                 <li>Тірон Андрій Русланович</li>
-            </ol>
-        </div>
-        <div class="wrapper">
-        <div class="col">
-            <div class="square"></div>
-            <div class="square"></div>
+            </ul>
         </div>
 
-        <div class="col">
-            <div class="rect"></div>
-            <div class="square"></div>
+        <div class="content-block">
+            <h4>Завдання Flexbox</h4>
+            <div class="wrapper">
+                <div class="col">
+                    <div class="square"></div>
+                    <div class="square"></div>
+                </div>
+
+                <div class="col center-col">
+                    <div class="rect"></div>
+                </div>
+
+                <div class="col">
+                    <div class="square"></div>
+                    <div class="square"></div>
+                </div>
+            </div>
+            <br>
+            <details>
+                <summary>Відкрити форму реєстрації</summary>
+                <form>
+                    <label>ПІБ студента:</label><br>
+                    <input type="text" name="fullname"><br>
+                    <input type="submit" value="Надіслати">
+                </form>
+            </details>
         </div>
 
-        <div class="col">
-            <div class="square"></div>
-            <div class="square"></div>
-        </div>
-    </div>
-        <div class="bigg-box">
+        <div class="content-block">
+            <h4>Гаррі Поттер</h4>
             <table class="book-table">
                 <thead>
                     <tr>
@@ -75,99 +96,37 @@
                     </tr>
                     <tr>
                         <th>Номер сторінок</th>
-                        <th>Назва розділів </th>
+                        <th>Назва розділів</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>5</td>
-                        <td>«Хлопчик, що вижив»</td>
-
-                    </tr>
-                    <tr>
-                        <td>23</td>
-                        <td>«Зникле скло»</td>
-
-                    </tr>
-                    <tr>
-                        <td>41</td>
-                        <td>«Листи від Нікого»</td>
-
-                    </tr>
-                    <tr>
-                        <td>59</td>
-                        <td>«Ключник»</td>
-
-                    </tr>
-                    <tr>
-                        <td>77</td>
-                        <td>«Алея Діаґон»</td>
-
-                    </tr>
-                    <tr>
-                        <td>95</td>
-                        <td>«Поїздка з платформи номер дев’ять і три чверті»</td>
-
-                    </tr>
-                    <tr>
-                        <td>113</td>
-                        <td>«Сортувальний капелюх»</td>
-
-                    </tr>
-                    <tr>
-                        <td>131</td>
-                        <td>«Майстер чарівного зілля»</td>
-
-                    </tr>
-                    <tr>
-                        <td>149</td>
-                        <td>«Опівнічна дуель»</td>
-
-                    </tr>
-                    <tr>
-                        <td>167</td>
-                        <td>«Гелловін»</td>
-
-                    </tr>
-                    <tr>
-                        <td>185</td>
-                        <td>«Квідич»</td>
-
-                    </tr>
-                    <tr>
-                        <td>203</td>
-                        <td>«Дзеркало Яцрес»</td>
-
-                    </tr>
-                    <tr>
-                        <td>221</td>
-                        <td>«Ніколас Фламель»</td>
-
-                    </tr>
-                    <tr>
-                        <td>239</td>
-                        <td>«Норберт, норвезький хребтоспин»</td>
-
-                    </tr>
-                    <tr>
-                        <td>257</td>
-                        <td>«Заборонений ліс»</td>
-
-                    </tr>
-                    <tr>
-                        <td>275</td>
-                        <td>«Крізь люк»</td>
-
-                    </tr>
-                    <tr>
-                        <td>293</td>
-                        <td>«Чоловік з двома обличчями»</td>
-
-                    </tr>
+                    <tr><td>5</td><td>«Хлопчик, що вижив»</td></tr>
+                    <tr><td>23</td><td>«Зникле скло»</td></tr>
+                    <tr><td>41</td><td>«Листи від Нікого»</td></tr>
+                    <tr><td>59</td><td>«Ключник»</td></tr>
+                    <tr><td>77</td><td>«Алея Діаґон»</td></tr>
+                    <tr><td>95</td><td>«Поїздка з платформи номер дев’ять і три чверті»</td></tr>
+                    <tr><td>113</td><td>«Сортувальний капелюх»</td></tr>
+                    <tr><td>131</td><td>«Майстер чарівного зілля»</td></tr>
+                    <tr><td>149</td><td>«Опівнічна дуель»</td></tr>
+                    <tr><td>167</td><td>«Гелловін»</td></tr>
+                    <tr><td>185</td><td>«Квідич»</td></tr>
+                    <tr><td>203</td><td>«Дзеркало Яцрес»</td></tr>
+                    <tr><td>221</td><td>«Ніколас Фламель»</td></tr>
+                    <tr><td>239</td><td>«Норберт, норвезький хребтоспин»</td></tr>
+                    <tr><td>257</td><td>«Заборонений ліс»</td></tr>
+                    <tr><td>275</td><td>«Крізь люк»</td></tr>
+                    <tr><td>293</td><td>«Чоловік з двома обличчями»</td></tr>
                 </tbody>
             </table>
         </div>
+
     </div>
+
+    <div class="fixed-footer">
+        Виконав: Студент групи КІУКІу-24-1 Глітко Богдан
+    </div>
+
 </body>
 
 </html>
