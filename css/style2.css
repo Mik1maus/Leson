@@ -1,0 +1,43 @@
+.flex-container {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+
+.container {
+    font-family: sans-serif;
+    display: flex;
+    flex-flow: column, wrap;
+}
+
+.wrapper {
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+    background: white;
+    border: 2px solid #000;
+    
+    display: flex;          
+    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  /* Каждая колонка */
+  .col {
+    display: flex;
+    flex-direction: column; /* сверху вниз */
+    justify-content: space-between;
+  }
+
+  .square {
+    width: 60px;
+    height: 60px;
+    background: navy;
+  }
+
+  .rect {
+    width: 60px;
+    height: 180px;          /* в 3 раза выше квадрата */
+    background: navy;
+  }
